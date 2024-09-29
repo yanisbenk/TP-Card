@@ -1,1 +1,15 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Product_1 = require("./services/Product");
+const Cart_1 = require("./services/Cart");
+const StorageArray_1 = require("./services/StorageArray");
+const storage = new StorageArray_1.InMemoryStorage();
+const cart = new Cart_1.Cart(storage);
+const phone = new Product_1.Product(300, "Phone");
+const computer = new Product_1.Product(500, "Computer");
+cart.addProduct(phone);
+cart.addProduct(computer);
+cart.removeProduct(computer);
+cart.addProduct(computer);
+cart.addProduct(computer);
+console.log(`Total: $${cart.displayCart()}`);
