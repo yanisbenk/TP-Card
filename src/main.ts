@@ -12,6 +12,5 @@ cart.addProduct(phone);
 cart.addProduct(computer);
 cart.removeProduct(computer);
 cart.addProduct(computer);
-cart.addProduct(computer);
 
 console.log(`Total: $${cart.displayCart()}`);

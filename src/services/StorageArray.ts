@@ -13,7 +13,7 @@ export class InMemoryStorage implements Storable {
   // Retire un produit au storage
   remove(item: Product): void {
     const index = this.storage.findIndex(
-      (product) => product.name === item.name
+      (product) => product.getName() === item.getName()
     );
     if (index !== -1) {
       this.storage.splice(index, 1);

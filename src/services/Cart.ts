@@ -19,6 +19,6 @@ export class Cart {
   displayCart(): number {
     return this.storage
       .getAll()
-      .reduce((total, product) => total + product.price, 0);
+      .reduce((total, product) => total + product.getPrice(), 0);
   }
 }
